@@ -13,12 +13,12 @@ public class Nombres {
         pret = false;
     }
 
-    public void calcul() {
+    public synchronized void calcul() {
         System.out.println("calculating");
         n++;
         carre = n*n;
     }
-    public void affiche() {
+    public synchronized void affiche() {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("n=");
         stringBuilder.append(n);
